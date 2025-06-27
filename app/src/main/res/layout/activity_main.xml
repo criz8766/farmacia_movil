@@ -14,7 +14,6 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <!--LogoApp-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -41,117 +40,64 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <!--Usuario-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
 
-                <!--Label usuario-->
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
+                    android:layout_height="wrap_content"
+                    android:hint="Correo Electrónico"
+                    app:boxBackgroundColor="@color/celesteFondo"
+                    app:hintTextColor="@color/black"
+                    app:boxStrokeColor="@color/azuloscurotexto"
+                    app:hintTextAppearance="@style/AppTheme.HintText" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                    <RelativeLayout
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/imputUsuario"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="textEmailAddress" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="Usuario"
-                            android:textColor="@color/azuloscurotexto"
-                            android:textStyle="bold"
-                            android:textSize="23sp">
-
-                        </TextView>
-                    </RelativeLayout>
-
-                </LinearLayout>
-
-                <!--Input usuario-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <EditText
-                            android:id="@+id/imputUsuario"
-                            android:layout_width="170dp"
-                            android:layout_height="70dp"
-                            android:layout_centerInParent="true"
-                            android:textColor="@color/azuloscurotexto"
-                            android:backgroundTint="@color/azuloscurotexto">
-
-                        </EditText>
-                    </RelativeLayout>
-
-                </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
 
-                <!--Label usuario-->
-                <LinearLayout
+                <com.google.android.material.textfield.TextInputLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="2">
+                    android:layout_height="wrap_content"
+                    android:hint="Contraseña"
+                    app:boxBackgroundColor="@color/celesteFondo"
+                    app:hintTextColor="@color/black"
+                    app:boxStrokeColor="@color/azuloscurotexto"
+                    app:passwordToggleEnabled="true"
+                    app:hintTextAppearance="@style/AppTheme.HintText" style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
-                    <RelativeLayout
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/imputClave"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="textPassword" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:text="Contraseña"
-                            android:textColor="@color/azuloscurotexto"
-                            android:textStyle="bold"
-                            android:textSize="23sp">
-
-                        </TextView>
-                    </RelativeLayout>
-
-                </LinearLayout>
-
-                <!--Input usuario-->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1">
-
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-                        <EditText
-                            android:id="@+id/imputClave"
-                            android:layout_width="170dp"
-                            android:layout_height="70dp"
-                            android:layout_centerInParent="true"
-                            android:inputType="numberPassword"
-                            android:textColor="@color/azuloscurotexto"
-                            android:backgroundTint="@color/azuloscurotexto">
-
-                        </EditText>
-                    </RelativeLayout>
-
-                </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
             </LinearLayout>
-
-
 
         </LinearLayout>
 

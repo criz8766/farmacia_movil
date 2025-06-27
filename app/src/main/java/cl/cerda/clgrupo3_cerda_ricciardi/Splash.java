@@ -8,34 +8,40 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.google.firebase.auth.FirebaseAuth; // Importar FirebaseAuth
+import com.google.firebase.auth.FirebaseUser; // Importar FirebaseUser
 
 public class Splash extends AppCompatActivity {
+
+    private FirebaseAuth mAuth; // Declarar FirebaseAuth
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Intent miIntent = new Intent();
+        mAuth = FirebaseAuth.getInstance(); // Inicializar FirebaseAuth
 
         Handler miHandler = new Handler();
 
         miHandler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                if (hayConexion(Splash.this)) {
+                    FirebaseUser currentUser = mAuth.getCurrentUser(); // Obtener el usuario actual de Firebase
 
-                if(hayConexion(Splash.this)){
-                    startActivity(new Intent(Splash.this, MainActivity.class));
-                    finish();
-                }else{
-                    //Toast.makeText(Splash.this, "No hay internet", Toast.LENGTH_SHORT).show();
-                    //finish();
+                    if (currentUser != null) {
+                        // Si ya hay un usuario logueado, ir directamente a MenuPrincipal
+                        startActivity(new Intent(Splash.this, MenuPrincipal.class));
+                    } else {
+                        // Si no hay usuario logueado, ir a MainActivity (login)
+                        startActivity(new Intent(Splash.this, MainActivity.class));
+                    }
+                    finish(); // Finalizar Splash Activity
+                } else {
                     AlertDialog.Builder alertBuilder = new AlertDialog.Builder(Splash.this);
                     alertBuilder.setTitle("Estamos en la B");
                     alertBuilder.setMessage("Necesitamos internet para continuar");
@@ -50,7 +56,7 @@ public class Splash extends AppCompatActivity {
                     dialog.setCanceledOnTouchOutside(false);
                 }
             }
-        }, 2000);
+        }, 2000); // Retraso de 2 segundos
     }
 
     public boolean hayConexion(Context context){

@@ -4,8 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:elevation="0dp"
-    android:background="@color/celeste"
-    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/celesteFondo" app:cardCornerRadius="10dp"
     android:layout_marginBottom="10dp">
 
     <LinearLayout
@@ -15,14 +14,13 @@
         android:orientation="horizontal"
         android:padding="10dp">
 
-        <!--TEXTOS-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingEnd="8dp">
 
-            <!--NOMBRE FARMACIA-->
             <TextView
                 android:id="@+id/nombreFarmacia"
                 android:layout_width="match_parent"
@@ -30,29 +28,29 @@
                 android:text="Nombre"
                 android:textAlignment="center"
                 android:textSize="25sp"
-                android:textStyle="bold">
+                android:textStyle="bold"
+                android:textColor="@color/azuloscurotexto">
 
             </TextView>
 
-            <!--INFORMACIÓN-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginTop="4dp">
 
-                <!--COMUNA-->
                 <TextView
                     android:id="@+id/precioProducto"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="comuna"
-                    android:textAlignment="center"
-                    android:textSize="20sp">
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp"
+                    android:textColor="@color/black">
 
                 </TextView>
 
-                <!--DIRECCIÓN-->
                 <TextView
                     android:id="@+id/direccionFarmacia"
                     android:layout_width="match_parent"
@@ -60,21 +58,22 @@
                     android:layout_weight="1"
                     android:text="dirección"
                     android:textStyle="italic"
-                    android:textAlignment="center"
-                    android:textSize="20sp">
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp"
+                    android:textColor="@color/black">
 
                 </TextView>
 
-                <!--HORARIO-->
                 <TextView
                     android:id="@+id/horarioFarmacia"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="horario"
-                    android:textColor="@color/celeste"
-                    android:textAlignment="center"
-                    android:textSize="20sp">
+                    android:textColor="@color/azuloscurotexto"
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp"
+                    android:textStyle="bold">
 
                 </TextView>
 
@@ -82,42 +81,41 @@
 
         </LinearLayout>
 
-        <!--BOTÓN-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:paddingStart="8dp">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/numtelefono"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/llamada"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/llamada"
+                android:textColor="@color/llamada"
                 android:text="Llamar"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:drawableLeft="@drawable/telefono">
+                app:icon="@drawable/telefono"
+                app:iconTint="@color/llamada"
+                android:layout_marginBottom="4dp">
+            </com.google.android.material.button.MaterialButton>
 
-            </Button>
-
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/ubicacion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/ubicacion"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                app:strokeColor="@color/ubicacion"
+                android:textColor="@color/ubicacion"
                 android:text="Ubicación"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:drawableLeft="@drawable/ubicacion">
-
-            </Button>
+                app:icon="@drawable/ubicacion"
+                app:iconTint="@color/ubicacion">
+            </com.google.android.material.button.MaterialButton>
 
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 </androidx.cardview.widget.CardView>

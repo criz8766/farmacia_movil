@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "587295731221",
+    "project_id": "cl-grupo3-cerda-ricciardi",
+    "storage_bucket": "cl-grupo3-cerda-ricciardi.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:587295731221:android:03ef7bfbc2b53fb830681c",
+        "android_client_info": {
+          "package_name": "cl.cerda.clgrupo3_cerda_ricciardi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCCJfonTpkQXRfLIF_By5qObUAXuqUUPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

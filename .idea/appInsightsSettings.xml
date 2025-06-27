@@ -8,10 +8,10 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="PLACEHOLDER" />
-                  <option name="mobileSdkAppId" value="" />
-                  <option name="projectId" value="" />
-                  <option name="projectNumber" value="" />
+                  <option name="appId" value="cl.cerda.clgrupo3_cerda_ricciardi" />
+                  <option name="mobileSdkAppId" value="1:587295731221:android:03ef7bfbc2b53fb830681c" />
+                  <option name="projectId" value="cl-grupo3-cerda-ricciardi" />
+                  <option name="projectNumber" value="587295731221" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />
