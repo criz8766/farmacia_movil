@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="0dp"
+    android:background="@color/celeste"
+    app:cardCornerRadius="10dp"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <!--TEXTOS-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--NOMBRE FARMACIA-->
+            <TextView
+                android:id="@+id/nombreFarmacia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <!--INFORMACIÓN-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <!--COMUNA-->
+                <TextView
+                    android:id="@+id/precioProducto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="comuna"
+                    android:textAlignment="center"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <!--DIRECCIÓN-->
+                <TextView
+                    android:id="@+id/direccionFarmacia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="dirección"
+                    android:textStyle="italic"
+                    android:textAlignment="center"
+                    android:textSize="20sp">
+
+                </TextView>
+
+                <!--HORARIO-->
+                <TextView
+                    android:id="@+id/horarioFarmacia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="horario"
+                    android:textColor="@color/celeste"
+                    android:textAlignment="center"
+                    android:textSize="20sp">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--BOTÓN-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/numtelefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/llamada"
+                android:text="Llamar"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/telefono">
+
+            </Button>
+
+            <Button
+                android:id="@+id/ubicacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/ubicacion"
+                android:text="Ubicación"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/ubicacion">
+
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

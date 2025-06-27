@@ -1,0 +1,34 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Clgrupo3_Cerda_Ricciardi" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Mytheme" parent="Theme.Material3.DayNight">
+        <item name="android:statusBarColor">@color/celeste</item>
+        <item name="actionBarStyle">@style/AppTheme.ActionBar</item>
+
+    </style>
+
+    <style name="AppTheme.ActionBar" parent="Widget.AppCompat.Light.ActionBar">
+        <item name="background">@color/celeste</item>
+        <item name="titleTextStyle">@style/ActionBar.TitleText</item>
+    </style>
+
+    <style name="ActionBar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white</item> <!-- 👈 o el color que quieras -->
+    </style>
+
+    <style name="MySearchViewStyle" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:textColorHint">@color/black</item>
+        <item name="android:textCursorDrawable">@drawable/my_custom_cursor_black</item>
+
+        <item name="colorControlNormal">@color/black</item>
+    </style>
+
+    <drawable name="my_custom_cursor_black">#FF000000</drawable>
+
+    <style name="Theme.Clgrupo3_Cerda_Ricciardi" parent="Base.Theme.Clgrupo3_Cerda_Ricciardi" />
+</resources>
